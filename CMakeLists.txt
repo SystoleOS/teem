@@ -559,7 +559,7 @@ endif()
 set(Teem_CV_LIBRARY_DEPENDS_FILE "\${Teem_ROOT_DIR}/${Teem_LIB_INSTALL_DIR}/${EXTRA_INSTALL_PATH}/TeemLibraryDepends.cmake")
 set(Teem_CV_EXECUTABLE_DIRS "\${Teem_ROOT_DIR}/bin")
 set(Teem_CV_LIBRARY_DIRS "\${Teem_ROOT_DIR}/${Teem_LIB_INSTALL_DIR}/${EXTRA_INSTALL_PATH}")
-set(Teem_CV_USE_FILE "\${Teem_ROOT_DIR}/${Teem_LIB_INSTALL_DIR}/${EXTRA_INSTALL_PATH}/TeemUse.cmake")
+set(Teem_CV_USE_FILE "${Teem_ROOT_DIR}/${Teem_SHARE_INSTALL_DIR}/Teem-${Teem_VERSION_STRING}/cmake/TeemUse.cmake")
 set(Teem_CV_INCLUDE_DIRS "\${Teem_ROOT_DIR}/include")
 set(Teem_CV_BUILT_LIBRARIES teem) # The libraries built by teem.  Currently we only build the mega library.
 
@@ -586,7 +586,7 @@ install(FILES
   "${Teem_SOURCE_DIR}/CMake/TeemUse.cmake"
   "${Teem_BINARY_DIR}/TeemBuildSettings.cmake"
   "${Teem_BINARY_DIR}/TeemLibraryDepends.cmake"
-  DESTINATION ${Teem_LIB_INSTALL_DIR}${EXTRA_INSTALL_PATH}
+  DESTINATION "${Teem_SHARE_INSTALL_DIR}/Teem-${Teem_VERSION_STRING}/cmake"
   COMPONENT Development
   )
 endif()
